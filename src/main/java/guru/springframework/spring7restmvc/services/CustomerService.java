@@ -6,9 +6,9 @@ import guru.springframework.spring7restmvc.model.Customer;
 import java.util.List;
 import java.util.UUID;
 
-public interface BeerService {
+public interface CustomerService {
 
-    List<Beer> listBeers();
+    List<Customer> listCustomers();
 
-    Beer getBeerById(UUID id);
+    Customer getCustomerById(UUID id);
 }

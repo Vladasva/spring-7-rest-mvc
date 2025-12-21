@@ -18,7 +18,8 @@ public class Beer {
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
 
-    Beer(UUID id, Integer version, String beerName, BeerStyle beerStyle, String upc, Integer quantityOnHand, BigDecimal price, LocalDateTime createdDate, LocalDateTime updatedDate) {
+    Beer(UUID id, Integer version, String beerName, BeerStyle beerStyle, String upc, Integer quantityOnHand,
+         BigDecimal price, LocalDateTime createdDate, LocalDateTime updatedDate) {
         this.id = id;
         this.version = version;
         this.beerName = beerName;
@@ -94,11 +95,14 @@ public class Beer {
         }
 
         public Beer build() {
-            return new Beer(this.id, this.version, this.beerName, this.beerStyle, this.upc, this.quantityOnHand, this.price, this.createdDate, this.updatedDate);
+            return new Beer(this.id, this.version, this.beerName, this.beerStyle, this.upc, this.quantityOnHand,
+                    this.price, this.createdDate, this.updatedDate);
         }
 
         public String toString() {
-            return "Beer.BeerBuilder(id=" + this.id + ", version=" + this.version + ", beerName=" + this.beerName + ", beerStyle=" + this.beerStyle + ", upc=" + this.upc + ", quantityOnHand=" + this.quantityOnHand + ", price=" + this.price + ", createdDate=" + this.createdDate + ", updatedDate=" + this.updatedDate + ")";
+            return "Beer.BeerBuilder(id=" + this.id + ", version=" + this.version + ", beerName=" + this.beerName +
+                    ", beerStyle=" + this.beerStyle + ", upc=" + this.upc + ", quantityOnHand=" + this.quantityOnHand +
+                    ", price=" + this.price + ", createdDate=" + this.createdDate + ", updatedDate=" + this.updatedDate + ")";
         }
     }
 }
